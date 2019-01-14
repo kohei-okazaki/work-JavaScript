@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>リンク集</title>
+<link rel="stylesheet" type="text/css" href="../css/menu.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+</head>
+<body>
+  <h1>ツール集</h1>
+  <ul class="accordion1">
+    <li>
+      <p class="ac1">USER</p>
+      <ul class="inner">
+        <li class="content1-1">
+          <a href="./userRegist/input.html" target="content">ユーザ情報登録</a>
+        </li>
+        <li class="content1-2">
+          <a href="./api/healthInfoReferenceRequest.html" target="content">健康情報照会API JSON生成</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <script type="text/javascript" src="../js/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      //.accordion1の中のp要素がクリックされたら
+      $('.accordion1 p').click(function() {
+        //クリックされた.accordion1の中のp要素に隣接するul要素が開閉する。
+        $(this).next('ul').slideToggle();
+      });
+    });
+  </script>
+</body>
+</html>
