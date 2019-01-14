@@ -4,10 +4,13 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Input</title>
 <link rel="stylesheet" type="text/css" href="../../css/layout.css">
+<link rel="stylesheet" type="text/css" href="../../css/lib/mprogress.min.css">
 </head>
 <body>
 
   <div class="largeLayout">
+    <!-- <progress id="progress"></progress> -->
+    <div id="progressbar1"></div>
     <form action="./confirm.html">
       <table>
         <tr>
@@ -45,8 +48,74 @@
       </table>
     </form>
   </div>
+
+  <script type="text/javascript" src="../../js/lib/jquery.min.js"></script>
+  <script type="text/javascript" src="../../js/lib/mprogress.min.js"></script>
   <script type="text/javascript" src="../../js/common.js"></script>
   <script type="text/javascript">
+    var mprogress = new Mprogress();
+    var progressValue = 0;
+    $('#name').change(function() {
+        var value = 0;
+        var nameValue = $('#name').val();
+        if (nameValue !== '') {
+          value += 1;
+        }
+
+        var oldValue = $('#old').val();
+        if (oldValue !== '') {
+          value += 1;
+        }
+
+        var fromValue = $('#from').val();
+        if (fromValue !== '') {
+          value += 1;
+        }
+        progressValue = value / 3;
+        console.log("progressValue = " + progressValue);
+        mprogress.set(progressValue);
+    });
+    $('#old').change(function() {
+        var value = 0;
+        var nameValue = $('#name').val();
+        if (nameValue !== '') {
+          value += 1;
+        }
+
+        var oldValue = $('#old').val();
+        if (oldValue !== '') {
+          value += 1;
+        }
+
+        var fromValue = $('#from').val();
+        if (fromValue !== '') {
+          value += 1;
+        }
+        progressValue = value / 3;
+        console.log("progressValue = " + progressValue);
+        mprogress.set(progressValue);
+    });
+    $('#from').change(function() {
+        var value = 0;
+        var nameValue = $('#name').val();
+        if (nameValue !== '') {
+          value += 1;
+        }
+
+        var oldValue = $('#old').val();
+        if (oldValue !== '') {
+          value += 1;
+        }
+
+        var fromValue = $('#from').val();
+        if (fromValue !== '') {
+          value += 1;
+        }
+        progressValue = value / 3;
+        console.log("progressValue = " + progressValue);
+        mprogress.set(progressValue);
+    });
+
 
   </script>
 </body>
