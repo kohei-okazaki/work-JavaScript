@@ -9,8 +9,6 @@
 <body>
 
   <div class="largeLayout">
-    <!-- <progress id="progress"></progress> -->
-    <div id="progressbar1"></div>
     <form action="./confirm.html">
       <table>
         <tr>
@@ -54,7 +52,6 @@
   <script type="text/javascript" src="../../js/common.js"></script>
   <script type="text/javascript">
     var mprogress = new Mprogress();
-    var progressValue = 0;
     $('#name').change(function() {
         var value = 0;
         var nameValue = $('#name').val();
@@ -71,47 +68,37 @@
         if (fromValue !== '') {
           value += 1;
         }
-        progressValue = value / 3;
+        var progressValue = value / 3;
         console.log("progressValue = " + progressValue);
         mprogress.set(progressValue);
     });
     $('#old').change(function() {
         var value = 0;
-        var nameValue = $('#name').val();
-        if (nameValue !== '') {
+        if ($('#name').val() !== '') {
           value += 1;
         }
-
-        var oldValue = $('#old').val();
-        if (oldValue !== '') {
+        if ($('#old').val() !== '') {
           value += 1;
         }
-
-        var fromValue = $('#from').val();
-        if (fromValue !== '') {
+        if ($('#from').val() !== '') {
           value += 1;
         }
-        progressValue = value / 3;
+        var progressValue = value / 3;
         console.log("progressValue = " + progressValue);
         mprogress.set(progressValue);
     });
     $('#from').change(function() {
         var value = 0;
-        var nameValue = $('#name').val();
-        if (nameValue !== '') {
+        if ($('#name').val() !== '') {
           value += 1;
         }
-
-        var oldValue = $('#old').val();
-        if (oldValue !== '') {
+        if ($('#old').val() !== '') {
           value += 1;
         }
-
-        var fromValue = $('#from').val();
-        if (fromValue !== '') {
+        if ($('#from').val() !== '') {
           value += 1;
         }
-        progressValue = value / 3;
+        var progressValue = value / 3;
         console.log("progressValue = " + progressValue);
         mprogress.set(progressValue);
     });
