@@ -1,0 +1,31 @@
+h1 {
+    font-size: 60pt;
+    color:aquamarin;
+    text-align: right;
+  }
+  body {
+    color:rgb(235, 144, 26);
+    font-size: 14pt;
+  }
+  table {
+    margin : 20px;
+  }
+  table tr td {
+    background-color: azure;
+    color : deeppink;
+    text-align: center;
+    padding: 3px 10px;
+  }
+  
+  .contentLayout {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+    width: 95%;
+    padding: 5px;
+    background: #d2e8d561;
+    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.32);
+  }
+  
+  
